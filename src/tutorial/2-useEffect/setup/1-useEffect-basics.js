@@ -8,11 +8,18 @@ const UseEffectBasics = () => {
 // when we want a side effect to happen
   useEffect(() => {
     console.log("call useEffect");
+    //You can setup a condition statement in side of a hook not outside of a hook
     if (value >= 1) {
       document.title = `New Meassage(${value})`;
     }
     
-  });
+  }, [value]);
+  
+  useEffect(() => {
+    console.log("hello world");
+  }, []);
+  
+
   console.log("render component");
 
 
